@@ -1,14 +1,14 @@
 from django.urls import path
 
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView, TokenRefreshView, TokenVerifyView, TokenBlacklistView
-)
+
 
 from .views import (
     user_view, user_preferences_view, ai_recomendation_view, 
     goal_view, health_report_view, meal_view, notification_view, 
     prediction_history_view, step_record_view, workout_view
 )
+from .views.user_view import LoginView
+
 
 urlpatterns = [
 
@@ -62,10 +62,8 @@ urlpatterns = [
     path('workout/id/<int:pk>', workout_view.WorkoutDetailView.as_view()),
     path('workout/search/', workout_view.WorkoutSearchView.as_view()),
 
-    # --- JWT Auth ---
-    path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('verify/', TokenVerifyView.as_view(), name='token_verify'),
-    path('logout/', TokenBlacklistView.as_view(), name='token_blacklist'),
+    # --- Login ---
+    path('login/', LoginView.as_view()),
+
 
 ]
