@@ -23,7 +23,7 @@ Esta API é responsável por toda a lógica de negócio, incluindo:
 * Operações de CRUD (Criar, Ler, Atualizar, Deletar) para refeições, exercícios e metas.
 * Armazenamento e recuperação de todos os dados do aplicativo.
 
-Este backend foi projetado para ser consumido pelo [frontend do ZenMotion](https://github.com/zenmotion/zenmotion)
+Este backend foi projetado para ser consumido pelo [frontend do ZenMotion](https://github.com/zenmotion/zenmotion) <br>
 Link da documentação: [Documentação](https://docs.google.com/document/d/1AasrrUBn9MBefa20Csc7duaQfjfH-jmJ9g0FmJ2SWY4/edit?usp=sharing).
 
 ---
