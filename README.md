@@ -29,7 +29,7 @@ Este backend foi projetado para ser consumido pelo [frontend do ZenMotion](https
 
 ## 👨‍💻 Autores
 
-**[Daniel Lucas dos Santos Corte - 202403517949]** - [daniellcorte@gmail.com](mailto:daniellcorte@gmail.com)
+**[Daniel Lucas dos Santos Corte - 202403517949]** - [daniellcorte@gmail.com](mailto:daniellcorte@gmail.com) <br>
 **[Julio Alexsandro Monteiro da Silva - 202403945487]** - [daniellcorte@gmail.com](mailto:daniellcorte@gmail.com)
 
 ---
