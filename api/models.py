@@ -12,7 +12,7 @@ class User(models.Model):
 
 class Workout(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    type = models.CharField(max_length=100)  # Ex: Corrida, Musculação, Yoga
+    type = models.CharField(max_length=100)  
     duration_minutes = models.IntegerField()
     calories_burned = models.FloatField()
     date = models.DateTimeField(auto_now_add=True)
@@ -24,8 +24,8 @@ class AIRecommendation(models.Model):
 
 class Meal(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    meal_type = models.CharField(max_length=50)  # Ex: Café da manhã, Almoço
-    food_items = models.TextField()  # Ex: "Banana, Aveia, Leite"
+    meal_type = models.CharField(max_length=50)  
+    food_items = models.TextField()  
     calories = models.FloatField()
     carbs = models.FloatField()
     protein = models.FloatField()
@@ -70,13 +70,14 @@ class Notification(models.Model):
 class UserPreferences(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     daily_step_goal = models.IntegerField(default=10000)
-    preferred_units = models.CharField(max_length=10, default='metric')  # metric/imperial
+    daily_calorie_goal = models.IntegerField(default=2000)  
+    preferred_units = models.CharField(max_length=10, default='metric')  
     notifications_enabled = models.BooleanField(default=True)
 
 
 class PredictionHistory(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    prediction_type = models.CharField(max_length=50)  # Ex: perda de peso, risco de lesão
+    prediction_type = models.CharField(max_length=50)  
     input_data = models.JSONField()
     prediction_result = models.TextField()
     predicted_at = models.DateTimeField(auto_now_add=True)

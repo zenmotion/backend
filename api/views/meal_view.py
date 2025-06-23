@@ -1,5 +1,6 @@
 from ..models import Meal
 from ..serializers import MealSerializer
+from ..filters import MealFilter
 
 from rest_framework.generics import ListAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import IsAuthenticated, AllowAny
@@ -22,3 +23,4 @@ class MealSearchView(ListAPIView):
     permission_classes = [AllowAny]
     filter_backends = [DjangoFilterBackend, SearchFilter]
     search_fields = ['type', 'description', 'calories', 'recorded_at']
+    filterset_class = MealFilter
